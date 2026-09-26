@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ONG Esperança</title>
+  <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+
+  <header>
+    <p>Transformando vidas através do voluntariado</p>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+      ☰
+    </button>
+    <nav id="navMenu">
+      <a href="#" onclick="navegar('inicio')">Início</a>
+      <div class="dropdown">
+        <a href="#" onclick="navegar('projetos')">Projetos ▾</a>
+        <div class="dropdown-menu">
+          <a href="#" onclick="navegar('projetos')">Horta Comunitária</a>
+          <a href="#" onclick="navegar('projetos')">Reforço Escolar</a>
+        </div>
+      </div>
+      <a href="#" onclick="navegar('cadastro')">Cadastro</a>
+    </nav>
+  </header>
+
+  <main class="grid">
+    <div id="conteudo">
+      <!-- O conteúdo é carregado via JavaScript -->
+    </div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <footer>
+    <p>&copy; 2026 ONG Esperança - Todos os direitos reservados</p>
+  </footer>
+
+  <script src="./ong.jpg"script.js"></script>
+</body>
+</html>
