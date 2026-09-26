@@ -19,7 +19,7 @@ function navegar(pagina) {
       <section>
         <h1>ONG Esperança</h1>
         <span class="badge">projeto ativo</span>
-        <img src="imagens/ong.jpg" alt="Voluntários da ONG Esperança">
+        <img src="./ong.jpg" alt="Voluntários da ONG Esperança">
         <h2>Quem somos</h2>
         <p>A ONG Esperança ajuda famílias por meio de ações sociais e trabalho voluntário.</p>
         <h2>Entre em contato</h2>
@@ -76,12 +76,12 @@ function mostrarToast(mensagem) {
 }
 
 function salvarCadastro(event) {
-    event.preventDefault(); // Cancela o envio padrão[span_2](start_span)[span_2](end_span)
+    event.preventDefault(); // Cancela o envio padrão
 
     const nome = event.target.nome;
     const email = event.target.email;
 
-    // Se estiver vazio, marca em vermelho e avisa[span_3](start_span)[span_3](end_span)
+    // Se estiver vazio, marca em vermelho e avisa
     if (!nome.value.trim() || !email.value.trim()) {
         mostrarToast("Preencha todos os campos obrigatórios!", "erro");
         if (!nome.value.trim()) nome.style.borderColor = "red";
@@ -89,13 +89,13 @@ function salvarCadastro(event) {
         return;
     }
 
-    // Se estiver correto, salva no localStorage[span_4](start_span)[span_4](end_span)
+    // Se estiver correto, salva no localStorage
     const dados = { nome: nome.value, email: email.value };
     let lista = JSON.parse(localStorage.getItem("cadastros")) || [];
     lista.push(dados);
     localStorage.setItem("cadastros", JSON.stringify(lista));
 
-    // Sucesso[span_5](start_span)[span_5](end_span)
+    // Sucesso
     mostrarToast("Cadastro realizado com sucesso!", "sucesso");
     event.target.reset();
     nome.style.borderColor = "";
